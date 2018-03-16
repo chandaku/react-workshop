@@ -1,7 +1,7 @@
 
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import CartItem from './CartItem'
+import CartItem from './CartItem';
 
 export default class CartList extends Component {
     constructor(props) {
@@ -13,44 +13,35 @@ export default class CartList extends Component {
     }
     
     render() {
-        // Destructure of elements
-
-        let {items} = this.props
-        console.log("Items in CartList:",items);
+        let {items} = this.props;
         return (
-            <div> 
-            <h2>CartList</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Qty</th>
-                        <th>Total</th>
-                        <th>Update</th>
-                        <th>Remove</th>
-                    </tr>
-                </tbody>
-            </table>
-            
-            {
-                items.map( item => {
-                    console.log("Item in CartList:",item);
-                    return <CartItem key={item.id}
-                    item = {item}
-                    ></CartItem>
-                })
-            }
-            </div>
+           <table>
+               <tbody>
+               <tr>
+                    <th>Name</th>
+                    <th>Price</th> 
+                    <th>Quantity</th>
+                </tr>
+                {
+                    items.map ( item => (
+                        <CartItem key={item.id} 
+                                item={item}
+                        >
+                        </CartItem>
+                    ))
+                }
+
+            </tbody>
+           </table>
         )
     }
 } 
 
 
 CartList.defaultProps = {
-   items: [] 
+    items: []
 }
 
 CartList.propTypes = {
-    items:PropTypes.array
+    items: PropTypes.array
 }

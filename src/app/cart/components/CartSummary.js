@@ -14,9 +14,9 @@ export default class CartSummary extends Component {
     render() {
         return (
             <div> 
-            <h2>CartSummary</h2>
-            <h2>{this.props.ammount}</h2>
-            <h2>{this.props.count}</h2>
+            <h4>CartSummary</h4>
+            <h5>Count : {this.props.count}</h5>
+            <h5>Amount : {this.props.amount}</h5>
             </div>
         )
     }

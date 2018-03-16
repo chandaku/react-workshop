@@ -1,9 +1,8 @@
 
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import CartSummary from "./CartSummary"
-import CartList from "./CartList"
-import * as actions from '../state/actions'
+import CartSummary from "./CartSummary";
+import CartList from "./CartList";
 
 export default class Cart extends Component {
     constructor(props) {
@@ -11,20 +10,18 @@ export default class Cart extends Component {
     }
     
     componentDidMount() {
-        if(this.inputElement){
-            this.inputElement.focus();
-        }
+        
     }
 
-    addItem(){
-        let id = Math.ceil(Math.random(),1000000);
+    addItem() {
+        let id = Math.ceil(Math.random() * 1000000);
         let item = {
-            id:id,
-            name: 'Product'+id,
-            price:100 + Math.ceil(Math.random(),1000),
-            qty :1
+            id: id,
+            name: 'Product ' + id,
+            price: 100 + Math.ceil(Math.random() * 1000),
+            qty: 1
         }
-        console.log(this.props)
+
         this.props.actions.addItemToCart(item);
     }
     
@@ -32,9 +29,14 @@ export default class Cart extends Component {
         return (
             <div> 
             <h2>Cart</h2>
-            <button onClick={()=>this.addItem()}>Add Item</button>
-            <CartList items = {this.props.items}/> 
-            <CartSummary ammount ={this.props.ammount} count = {this.props.count}/>
+            <button onClick={()=> this.addItem()}>
+                Add Item
+            </button>
+            <CartList items = {this.props.items}>
+            </CartList>
+            
+            <CartSummary count = {this.props.count}
+            amount ={this.props.amount}/>
             </div>
         )
     }
@@ -42,9 +44,9 @@ export default class Cart extends Component {
 
 
 Cart.defaultProps = {
-    items :[],
-    ammount: 1500,
-    count : 5000
+    items: [],
+    count:0,
+    amount: 0
 }
 
 Cart.propTypes = {

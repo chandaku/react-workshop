@@ -11,7 +11,7 @@ import CartItem from '../components/CartItem';
 const mapStateToProps = (state) => {
     console.log(state);
     return {
-         items: state.items
+         items: state.cart.cartItems
     }
 }
 

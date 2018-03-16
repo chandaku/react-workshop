@@ -7,7 +7,7 @@ return {
         item:{
             id:product.id,
             name:product.name,
-            qty:product.qty||1,
+            qty:product.qty || 1,
             price:product.price
         }
     }

@@ -1,12 +1,12 @@
 import React from "react";
-import Cart from './cart/containers/Cart'
+import Contact from "./common/Contact"
  
 export class App extends React.Component {
 
     render() {
         return (
             <div>
-            <Cart/>
+            <Contact/>
             </div>
             )
     }

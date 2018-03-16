@@ -18,6 +18,7 @@ export default class Address extends Component {
             <h5>Street : {this.props.street}</h5>
             <h5>Pincode : {this.props.pincode}</h5>
             <h5>City : {this.props.cityname}</h5>
+            <h5>Phone : {this.props.phone}</h5>
             </div>
         )
     }

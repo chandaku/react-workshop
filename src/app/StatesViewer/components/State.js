@@ -1,6 +1,7 @@
 
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
 export default class State extends Component {
     constructor(props) {
@@ -18,11 +19,11 @@ export default class State extends Component {
                 <td>{state.id}</td>
                 <td>{state.code}</td>
                 <td>{state.name}</td>
-                <td><button onClick={()=>{
-                    this.props.actions.viewState(state.id)
-                }}>
-                View
-                </button></td>
+                <td> <NavLink to={`/stateView/${state.id}`}
+                    className="button"
+                    activeClassName ="success">
+                    View
+                </NavLink></td>
                 
             </tr>
             

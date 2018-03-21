@@ -33,7 +33,7 @@ export default class Routes extends Component {
                             <Route path="/cart" exact component={Cart} />
                             <Route path="/states" exact component={StateList} />
                             <Route path="/contact" exact component={Contact} />
-                            <Route path="/stateView" exact component={StateView} />
+                            <Route path="/stateView/:id" exact component={StateView} />
                         </Switch>
                     </App>
                 </Router>

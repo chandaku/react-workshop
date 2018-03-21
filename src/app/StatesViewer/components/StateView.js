@@ -8,7 +8,8 @@ export default class StateView extends Component {
     }
     
     componentDidMount() {
-        this.props.actions.viewState(10);
+       
+        this.props.actions.viewState(this.props.match.params.id);
     }
     
     render() {

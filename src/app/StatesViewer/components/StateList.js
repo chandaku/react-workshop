@@ -24,7 +24,6 @@ export default class StateList extends Component {
                 <h2> Error loading states {this.props.errorMessage} </h2>
             )
         }
-        console.log("xxxxxxxxxxxxx" + this.props.states)
         return (
             <div> 
             <h2>StateList</h2>
@@ -34,6 +33,8 @@ export default class StateList extends Component {
                         <td>ID</td>
                         <td>Code</td>
                         <td>Name</td>
+                        <td>View</td>
+                        <td>Edit</td>
                 </tr>
                
                 {
@@ -52,16 +53,6 @@ export default class StateList extends Component {
 
 StateList.defaultProps = {
     states : [
-        {
-        "code": "DL",
-        "id": 1,
-        "name": "Delhi"
-        },
-        {
-        "code": "WB",
-        "id": 2,
-        "name": "West Bengal"
-        }
         ],
     loading :false,
     error :false,

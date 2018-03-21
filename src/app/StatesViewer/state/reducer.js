@@ -9,7 +9,7 @@ const INITIAL_STATES = {
 }
 
 export default function StateReducer(state= INITIAL_STATES, action){
-    console.log("state reducer ", state, action);
+    console.log("states reducer ", state, action);
     switch(action.type){
 
         case ActionTypes.INITIALIZE :
@@ -22,3 +22,4 @@ export default function StateReducer(state= INITIAL_STATES, action){
         return state;
     }
 }
+

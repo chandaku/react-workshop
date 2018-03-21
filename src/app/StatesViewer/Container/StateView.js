@@ -2,11 +2,12 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as actions from '../state/actions'
 
-import StateList from "../components/StateList"
+import StateView from "../components/StateView"
 
 const mapStateToProps = (state) =>{
+    console.log("mapStateToProps"+ state)
     return {
-        states : state.stateList.states
+        state : state.stateView.state
     }
 }
 
@@ -16,4 +17,4 @@ const mapDispatchToProps = (dispatch) =>{
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (StateList)
+export default connect(mapStateToProps, mapDispatchToProps) (StateView)

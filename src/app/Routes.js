@@ -9,7 +9,8 @@ import Contact from './components/common/Contact';
 import App from './App';
 import Cart from './cart/containers/Cart';
 import StateList from './StatesViewer/Container/StateList';
-import Home from './components/common/Home'
+import Home from './components/common/Home';
+import StateView from './StatesViewer/Container/StateView';
 
 export default class Routes extends Component {
     constructor(props) {
@@ -32,6 +33,7 @@ export default class Routes extends Component {
                             <Route path="/cart" exact component={Cart} />
                             <Route path="/states" exact component={StateList} />
                             <Route path="/contact" exact component={Contact} />
+                            <Route path="/stateView" exact component={StateView} />
                         </Switch>
                     </App>
                 </Router>

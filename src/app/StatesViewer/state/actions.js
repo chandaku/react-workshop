@@ -9,7 +9,14 @@ export function initStates(states){
         }
     }
 }
-
+export function loadState(state){
+    return {
+        type: ActionTypes.GET_STATE,
+        payload:{
+            state : state
+        }
+    }
+}
 
 export function loading (status) {
     return {
@@ -54,3 +61,29 @@ export function fetchStates() {
         })
     }
 }
+
+export function viewState(id){
+    console.log("@###########"+id)
+    return function(dispatch) {
+
+        //no error
+        dispatch(initError(false));
+        dispatch(loading(true));
+
+        return service.getState(id)
+        .then ( state => {
+            console.log("state arrived as state"+state)
+            //keep the data in redux
+            
+            dispatch(loadState(state));
+            //dispatch(loading(false));
+          
+            return states; //useful for mock testing
+        })
+        .catch ( error => {
+            //dispatch(loading(false));
+            //dispatch(initError(error.toString()));
+        })
+    }
+}
+

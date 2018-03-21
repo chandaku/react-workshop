@@ -15,7 +15,6 @@ export default class Contact extends Component {
     render() {
         return (
             <div> 
-            <h2>Contact</h2>
             <Address address={{"type":"Head Office", "street":"Netherland","pincode":"123123", "city":"Netherland", "phone":"+31-32453454" }}/>
             <Address address={{"type":"Branch Office", "street":"Park-Centra","pincode":"122001", "city":"Gurgaon", "phone":"+91-923932332" }}/>
             </div>

@@ -8,7 +8,8 @@ import {
 import Contact from './components/common/Contact';
 import App from './App';
 import Cart from './cart/containers/Cart';
-import StateList from './StatesViewer/Container/StateList'
+import StateList from './StatesViewer/Container/StateList';
+import Home from './components/common/Home'
 
 export default class Routes extends Component {
     constructor(props) {
@@ -27,9 +28,10 @@ export default class Routes extends Component {
                 <Router>
                     <App>
                         <Switch>
-                            <Route path="/" exact component={Contact} />
+                            <Route path="/" exact component={Home} />
                             <Route path="/cart" exact component={Cart} />
                             <Route path="/states" exact component={StateList} />
+                            <Route path="/contact" exact component={Contact} />
                         </Switch>
                     </App>
                 </Router>

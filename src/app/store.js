@@ -7,7 +7,7 @@ import StateReducer from "./StatesViewer/state/reducer"
 
 
 let rootReducer = combineReducers({
-   // cart:cartReducer,
+    cart:cartReducer,
     stateList: StateReducer
 })
 

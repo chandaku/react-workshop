@@ -13,7 +13,7 @@ export default function Address (props) {
             <h5>Phone : {address.phone}</h5>
             </div>
         )
-    }
+}
 
 
 

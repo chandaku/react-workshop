@@ -7,7 +7,8 @@ import {
         } from 'react-router-dom';
 import Contact from './components/common/Contact';
 import App from './App';
-import Cart from './cart/containers/Cart'
+import Cart from './cart/containers/Cart';
+import StateList from './StatesViewer/Container/StateList'
 
 export default class Routes extends Component {
     constructor(props) {
@@ -28,6 +29,7 @@ export default class Routes extends Component {
                         <Switch>
                             <Route path="/" exact component={Contact} />
                             <Route path="/cart" exact component={Cart} />
+                            <Route path="/states" exact component={StateList} />
                         </Switch>
                     </App>
                 </Router>
